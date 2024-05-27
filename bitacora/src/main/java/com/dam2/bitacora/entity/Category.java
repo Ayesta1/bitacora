@@ -16,17 +16,17 @@ public class Category {
     @Column(name="id")
     private Long id;
 
-    @Column(name="name")
-    private String name;
+    @Column(name="nombre")
+    private String nombre;
 
     @Column(name="icon")
     private String icon;
 
     public Category () {}
 
-    public Category (Long id, String name, String icon) {
+    public Category (Long id, String nombre, String icon) {
         this.id = id;
-        this.name = name;
+        this.nombre = nombre;
         this.icon = icon;
     }
 
@@ -38,12 +38,12 @@ public class Category {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getIcon() {
@@ -56,6 +56,6 @@ public class Category {
     
     @Override
     public String toString() {
-        return "Category [id=" + id + ", name=" + name + ", icon=" + icon + "]";
+        return "Category [id=" + id + ", name=" + nombre + ", icon=" + icon + "]";
     }
 }
