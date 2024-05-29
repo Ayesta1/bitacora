@@ -128,16 +128,16 @@ public class UserRestController {
        
     // /*Este método se hará cuando por una petición POST (como indica la anotación) se llame a la url
     // http://127.0.0.1:8080/users  */
-    // @PostMapping("/users")
-    // public Users addUser(@RequestBody Users users) {
-    //     users.setId(1);
+    @PostMapping("/users")
+    public Users addUser(@RequestBody Users users) {
+        users.setId(null);
 
-    //     //Este metodo guardará al usuario enviado
-    //     usersDao.save(users);
+        //Este metodo guardará al usuario enviado
+        usersService.save(users);
 
-    //     return users;
+        return users;
 
-    // }
+    }
     // /*Este método se hará cuando por una petición PUT (como indica la anotación) se llame a la url
     // http://127.0.0.1:8080/users  */
     @PutMapping("/users")
