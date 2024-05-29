@@ -30,11 +30,11 @@ public class Category {
         this.icon = icon;
     }
 
-    public Long getCategoryId() {
+    public Long getId() {
         return id;
     }
 
-    public void setCategoryId(Long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
