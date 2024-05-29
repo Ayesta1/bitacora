@@ -63,12 +63,12 @@ INSERT INTO Users(username, birthday, mail, contra, profile_photo) VALUES ('Ali'
 
 #añadimos las categorias
 
-INSERT INTO Categories (name, icon) VALUES ('musica', NULL);
-INSERT INTO Categories (name, icon) VALUES ('gastronomia', NULL);
-INSERT INTO Categories (name, icon) VALUES ('ver para creer', NULL);
-INSERT INTO Categories (name, icon) VALUES ('+18 fiesta', NULL);
-INSERT INTO Categories (name, icon) VALUES ('ver para creer', NULL);
-INSERT INTO Categories (name, icon) VALUES ('+18 perverso', NULL);
+INSERT INTO Categories (name, icon) VALUES ('Musica', NULL);
+INSERT INTO Categories (name, icon) VALUES ('Gastronomia', NULL);
+INSERT INTO Categories (name, icon) VALUES ('Ver para creer', NULL);
+INSERT INTO Categories (name, icon) VALUES ('+18 Fiesta', NULL);
+INSERT INTO Categories (name, icon) VALUES ('Anime', NULL);
+INSERT INTO Categories (name, icon) VALUES ('+18 Perverso', NULL);
 
 #añadimos los logros por id : perverso id 6
 
