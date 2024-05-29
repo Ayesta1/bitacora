@@ -79,33 +79,36 @@ public class UserRestController {
     /*Este método se hará cuando por una petición GET (como indica la anotación) se llame a la url + el id de un usuario
     http://127.0.0.1:8080/users/1 */
 
-    // @GetMapping("/users/{id}")
-    // public Users obtenerUsuario(@PathVariable Long id) {
-    //     Optional<Users> usuario = users.stream().filter(u -> u.getId()==(id)).findFirst();
-    //     return usuario.orElse(null);
-    // }
-
-    // @PutMapping("/users/{id}")
-    // public Users actualizarUsuario(@PathVariable Long id, @RequestBody Users usuarioActualizado) {
-    //     for (Users usuario : users) {
-    //         if (usuario.getId()==(id)) {
-    //             usuario.setUsername(usuarioActualizado.getUsername());
-    //             usuario.setMail(usuarioActualizado.getMail());
-    //             return usuario;
-    //         }
-    //     }
-    //     return null;
-    // }
-    @GetMapping("/users/{userId}")
-    public Users getUser(@PathVariable long userId){
-        Users users = usersService.findById(userId);
-
-        if(users == null) {
-            throw new RuntimeException("User id not found -"+userId);
-        }
-        //retornará al usuario con id pasado en la url
-        return users;
+    @GetMapping("/users/{id}")
+    public Users obtenerUsuario(@PathVariable Long id) {
+        Optional<Users> usuario = users.stream().filter(u -> u.getId()==(id)).findFirst();
+        return usuario.orElse(null);
     }
+
+    @PutMapping("/users/{id}")
+    public Users actualizarUsuario(@PathVariable Long id, @RequestBody Users usuarioActualizado) {
+        for (Users usuario : users) {
+            if (usuario.getId()==(id)) {
+                usuario.setUsername(usuarioActualizado.getUsername());
+                usuario.setBirthday(usuarioActualizado.getBirthday());
+                usuario.setMail(usuarioActualizado.getMail());
+                usuario.setContra(usuarioActualizado.getContra());
+                usuario.setProfilePhoto(usuarioActualizado.getProfilePhoto());
+                return usuario;
+            }
+        }
+        return null;
+    }
+    // @GetMapping("/users/{userId}")
+    // public Users getUser(@PathVariable long userId){
+    //     Users users = usersService.findById(userId);
+
+    //     if(users == null) {
+    //         throw new RuntimeException("User id not found -"+userId);
+    //     }
+    //     //retornará al usuario con id pasado en la url
+    //     return users;
+    // }
 
     //QUERY ERROR
     // @GetMapping("/achievements/category/{categoryId}")

@@ -13,7 +13,7 @@ public interface UsersService{
 
      public Users findById(Long id);
 
-    public void save(Users userId);
+    public void save(Users id);
 
     public void deleteById(Long id);
 }
