@@ -68,7 +68,7 @@ INSERT INTO Categories (name, icon) VALUES ('Gastronomia', NULL);
 INSERT INTO Categories (name, icon) VALUES ('Ver para creer', NULL);
 INSERT INTO Categories (name, icon) VALUES ('+18 Fiesta', NULL);
 INSERT INTO Categories (name, icon) VALUES ('Anime', NULL);
-INSERT INTO Categories (name, icon) VALUES ('+18 Perverso', NULL);
+INSERT INTO Categories (name, icon) VALUES ('+18 PUserserverso', NULL);
 
 #añadimos los logros por id : perverso id 6
 
@@ -189,3 +189,27 @@ INSERT INTO Achievements (categoryid, title, descripcion) VALUES (3,'Tijuca','El
 INSERT INTO Achievements (categoryid, title, descripcion) VALUES (3,'Al ladin','Taj Mahal (India).');
 INSERT INTO Achievements (categoryid, title, descripcion) VALUES (3,'Maravillas','Conigue los logros Gebalene, Tijuca ,“Dinastia Ming”, “Gladiador”.');
 INSERT INTO Achievements (categoryid, title, descripcion) VALUES (3,'Maravillas al completo','Conigue los logros “Andale”, “Kuzco”, y “Al ladin”.');
+
+#añadinos los logros por id : 5 anime
+
+INSERT INTO Achievements (categoryid, title, descripcion) VALUES (5,'Your April in April','Empieza y termina “Your Lie in April” en abril.');
+INSERT INTO Achievements (categoryid, title, descripcion) VALUES (5,'Tragones y Mazmorras','Mira la primera temporada de “Tragones y Mazmorras”.');
+INSERT INTO Achievements (categoryid, title, descripcion) VALUES (5,'Old but gold','Mira un anime que empezó su emisión antes del 2000.');
+INSERT INTO Achievements (categoryid, title, descripcion) VALUES (5,'Escritura peligrosa','Obtén una Death Note y escribe tres nombres en ella.');
+INSERT INTO Achievements (categoryid, title, descripcion) VALUES (5,'Rewatch','Termina un anime por segunda vez.');
+INSERT INTO Achievements (categoryid, title, descripcion) VALUES (5,'Bleach','Termina el anime “Bleach”.');
+INSERT INTO Achievements (categoryid, title, descripcion) VALUES (5,'Death note','Termina el anime “Death Note”.');
+INSERT INTO Achievements (categoryid, title, descripcion) VALUES (5,'Grand line 2.0','Empieza a ver el live action de one piece.');
+INSERT INTO Achievements (categoryid, title, descripcion) VALUES (5,'Jojos','Termina el anime “Jojos bizarre adventure”.');
+INSERT INTO Achievements (categoryid, title, descripcion) VALUES (5,'Baki','Termina el anime “Baki”.');
+INSERT INTO Achievements (categoryid, title, descripcion) VALUES (5,'Hanma','Termina el anime “Baki Hanma”.');
+INSERT INTO Achievements (categoryid, title, descripcion) VALUES (5,'Cowboy bebop','Termina el anime “Cowboy bebop”.');
+INSERT INTO Achievements (categoryid, title, descripcion) VALUES (5,'Bebop 2.0','Termina el live action de “Cowboy bebop”.');
+INSERT INTO Achievements (categoryid, title, descripcion) VALUES (5,'My hero academia','Termina el anime “my hero academia”.');
+INSERT INTO Achievements (categoryid, title, descripcion) VALUES (5,'Attack on titan','Termina el anime “attack on titan”.');
+INSERT INTO Achievements (categoryid, title, descripcion) VALUES (5,'Detectiu conan','Termina el anime “Detectiu Conan”.');
+INSERT INTO Achievements (categoryid, title, descripcion) VALUES (5,'Inuyasha','Termina el anime “inuyasha”.');
+INSERT INTO Achievements (categoryid, title, descripcion) VALUES (5,'Sakura cazadora de cartas','Termina el anime “Sakura cazadora de cartas”.');
+INSERT INTO Achievements (categoryid, title, descripcion) VALUES (5,'Bobobo','Termina el anime “Bobobo”.');
+INSERT INTO Achievements (categoryid, title, descripcion) VALUES (5,'HxH','Termina el anime “Hunter x Hunter”.');
+
