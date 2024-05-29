@@ -11,7 +11,7 @@ CREATE TABLE Users(
 );
 CREATE TABLE Categories (
   id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  nombre varchar(40) NOT NULL,
+  name varchar(40) NOT NULL,
   icon varchar(250)
 );
 
@@ -63,12 +63,12 @@ INSERT INTO Users(username, birthday, mail, contra, profile_photo) VALUES ('Ali'
 
 #añadimos las categorias
 
-INSERT INTO Categories (nombre, icon) VALUES ('musica', NULL);
-INSERT INTO Categories (nombre, icon) VALUES ('gastronomia', NULL);
-INSERT INTO Categories (nombre, icon) VALUES ('ver para creer', NULL);
-INSERT INTO Categories (nombre, icon) VALUES ('+18 fiesta', NULL);
-INSERT INTO Categories (nombre, icon) VALUES ('ver para creer', NULL);
-INSERT INTO Categories (nombre, icon) VALUES ('+18 perverso', NULL);
+INSERT INTO Categories (name, icon) VALUES ('musica', NULL);
+INSERT INTO Categories (name, icon) VALUES ('gastronomia', NULL);
+INSERT INTO Categories (name, icon) VALUES ('ver para creer', NULL);
+INSERT INTO Categories (name, icon) VALUES ('+18 fiesta', NULL);
+INSERT INTO Categories (name, icon) VALUES ('ver para creer', NULL);
+INSERT INTO Categories (name, icon) VALUES ('+18 perverso', NULL);
 
 #añadimos los logros por id : perverso id 6
 

@@ -66,6 +66,14 @@ public class UserRestController {
         return categoryService.findAll();
     }
 
+    @GetMapping("/category/{id}")
+    public Category getCategory(@PathVariable Long id){
+        
+        Category category = (Category) categoryService.findById(id);
+        return category;
+    }
+
+
     
 
     /*Este método se hará cuando por una petición GET (como indica la anotación) se llame a la url + el id de un usuario
