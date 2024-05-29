@@ -30,4 +30,23 @@ public class UsersServiceImpl  implements UsersService {
         return usersDAO.findAll();
     }
 
+
+    @Override
+    public void deleteById(Long id) {
+
+        Users user = usersDAO.findById(id).orElse(null);
+        
+        if (user != null) {
+            usersDAO.delete(user);
+        
+        return;
+        }
+    }
+
+
+    @Override
+    public void save(Users user) {
+        usersDAO.save(user);
+    }
+
 }

@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -137,31 +137,31 @@ public class UserRestController {
     // }
     // /*Este método se hará cuando por una petición PUT (como indica la anotación) se llame a la url
     // http://127.0.0.1:8080/users  */
-    // @PutMapping("/users")
-    // public Users updateUser(@RequestBody Users userId) {
+    @PutMapping("/users")
+    public Users updateUser(@RequestBody Users id) {
 
-    //     usersDao.save(userId);
+        usersService.save(id);
 
-    //     //este metodo actualizará al usuario enviado
+        //este metodo actualizará al usuario enviado
 
-    //     return userId;
-    // }
+        return id;
+    }
 
     // /*Este método se hará cuando por una petición DELETE (como indica la anotación) se llame a la url + id del usuario
     // http://127.0.0.1:8080/users/1  */
-    // @DeleteMapping("users/{userId}")
-    // public String deteteUser(@PathVariable int userId) {
+    @DeleteMapping("users/{userId}")
+    public String deteteUser(@PathVariable Long id) {
 
-    //     Users user = usersDao.findById(userId);
+        Users user = usersService.findById(id);
 
-    //     if(user == null) {
-    //         throw new RuntimeException("User id not found -"+userId);
-    //     }
+        if(user == null) {
+            throw new RuntimeException("User id not found -"+id);
+        }
 
-    //     usersDao.deleteById(userId);
+        usersService.deleteById(id);
 
-    //     //Esto método, recibira el id de un usuario por URL y se borrará de la bd.
-    //     return "Deleted user id - "+userId;
-    // }
+        //Esto método, recibira el id de un usuario por URL y se borrará de la bd.
+        return "Deleted user id - "+id;
+    }
 
 }
