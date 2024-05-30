@@ -28,6 +28,15 @@ public class AchievementServiceImpl implements AchievementService {
         return achievementsDAO.findAll();
     }
 
+
+    @Override
+    public List<Achievements> findByCategoryId(Long categoryid) {
+        
+        return achievementsDAO.findByCategoryId(null, null);
+    }
+
+
+    
     // QUERY ERROR
     // @Override
     // public Achievements getAchievementsByCategoryId(long categoryid) {

@@ -22,16 +22,16 @@ public class Achievements {
     @Column(name="title")
     private String title;
 
-    @Column(name="descripcion")
-    private String descripcion;
+    @Column(name="description")
+    private String description;
 
     public Achievements () {}
 
-    public Achievements(Long id, Long categoryid, String title, String descripcion) {
+    public Achievements(Long id, Long categoryid, String title, String description) {
         this.id = id;
         this.categoryid = categoryid;
         this.title = title;
-        this.descripcion = descripcion;
+        this.description = description;
     }
 
     public Long getAchievementId() {
@@ -59,16 +59,16 @@ public class Achievements {
     }
 
     public String getDescription() {
-        return descripcion;
+        return description;
     }
 
-    public void setDescription(String descripcion) {
-        this.descripcion = descripcion;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
     public String toString() {
-        return "User [id=" + id + ", category=" + categoryid + ", title=" + title + ", description=" + descripcion + "]";
+        return "User [id=" + id + ", category=" + categoryid + ", title=" + title + ", description=" + description + "]";
     }
 
 }

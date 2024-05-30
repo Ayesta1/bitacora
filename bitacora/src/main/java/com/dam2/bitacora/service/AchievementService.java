@@ -12,7 +12,5 @@ public interface AchievementService {
 
     public List<Achievements> findAll();
 
-
-    //QUERY ERROR
-    // public Achievements getAchievementsByCategoryId(long categoryid);
+    public List<Achievements> findByCategoryId(Long categoryid); 
 }

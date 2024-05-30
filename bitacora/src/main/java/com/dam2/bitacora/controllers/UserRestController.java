@@ -66,12 +66,12 @@ public class UserRestController {
         return categoryService.findAll();
     }
 
-    @GetMapping("/category/{id}")
-    public Category getCategory(@PathVariable Long id){
+    // @GetMapping("/category/{id}")
+    // public Category getCategory(@PathVariable Long id){
         
-        Category category = (Category) categoryService.findById(id);
-        return category;
-    }
+    //     Category category = (Category) categoryService.findById(id);
+    //     return category;
+    // }
 
 
     
@@ -92,7 +92,7 @@ public class UserRestController {
                 usuario.setUsername(usuarioActualizado.getUsername());
                 usuario.setBirthday(usuarioActualizado.getBirthday());
                 usuario.setMail(usuarioActualizado.getMail());
-                usuario.setContra(usuarioActualizado.getContra());
+                usuario.setPassword(usuarioActualizado.getPassword());
                 usuario.setProfilePhoto(usuarioActualizado.getProfilePhoto());
                 return usuario;
             }
@@ -110,12 +110,28 @@ public class UserRestController {
     //     return users;
     // }
 
-    //QUERY ERROR
-    // @GetMapping("/achievements/category/{categoryId}")
-    // public Achievements getAchievementsByCategoryId(@PathVariable long categoryid) {
-        
-    //     return achievementService.getAchievementsByCategoryId(categoryid);
-    // }
+    
+    @GetMapping("/category/{categoryId}")
+    public List<Achievements> findByCategoryId(@PathVariable Long categoryid) {
+
+        switch (categoryid.intValue()) {
+            
+            case 1:
+                    return achievementService.findByCategoryId(1L);
+            case 2:
+                    return achievementService.findByCategoryId(2L);   
+            case 3:
+                    return achievementService.findByCategoryId(3L);
+            case 4:
+                    return achievementService.findByCategoryId(4L);
+            case 5:
+                    return achievementService.findByCategoryId(5L);
+            case 6:
+                    return achievementService.findByCategoryId(6L);
+                default:
+                    throw new IllegalArgumentException("Invalid category id: " + categoryid);
+        }
+    }
 
     @GetMapping("/users/achievements/{id}")
     public Achievements getAchievements(@PathVariable long id){

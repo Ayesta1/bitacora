@@ -28,20 +28,20 @@ public class Users {
     @Column(name="mail")
     private String mail;
 
-    @Column(name="contra")
-    private String contra;
+    @Column(name="password")
+    private String password;
 
     @Column(name="profile_photo")
     private String profilephoto;
 
     public Users() {}
 
-    public Users(Long id, String username,Year birthday, String mail, String contra, String profilephoto) {
+    public Users(Long id, String username,Year birthday, String mail, String password, String profilephoto) {
         this.id = id;
         this.username = username;
         this.birthday = birthday;
         this.mail = mail;
-        this.contra = contra;
+        this.password = password;
         this.profilephoto = profilephoto;
     }
 
@@ -77,12 +77,12 @@ public class Users {
         this.mail = mail;
     }
 
-    public String getContra() {
-        return contra;
+    public String getPassword() {
+        return password;
     }
 
-    public void setContra(String contra) {
-        this.contra = contra;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getProfilePhoto() {
@@ -95,7 +95,7 @@ public class Users {
     
     @Override
     public String toString() {
-        return "User [id=" + id + ", username=" + username + ", birthday=" + birthday + ", mail=" + mail + ", password=" + contra + ", profilephoto=" + profilephoto
+        return "User [id=" + id + ", username=" + username + ", birthday=" + birthday + ", mail=" + mail + ", password=" + password + ", profilephoto=" + profilephoto
                 + "]";
     }
 }
