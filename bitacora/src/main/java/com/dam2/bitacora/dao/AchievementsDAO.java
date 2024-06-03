@@ -14,5 +14,5 @@ public interface AchievementsDAO extends JpaRepository <Achievements, Long>{
 
     @Query("SELECT a.title, a.description FROM Achievements a WHERE a.categoryid= :categoryid")
     List<Achievements> findByCategoryId(@Param("categoryid") Long categoryid);
-
+    
 }

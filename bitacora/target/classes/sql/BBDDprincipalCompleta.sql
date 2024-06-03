@@ -25,12 +25,12 @@ CREATE TABLE Achievements (
   FOREIGN KEY (categoryid) REFERENCES Categories(id)
 );
 
-CREATE TABLE UserAchievements (
+CREATE TABLE Userachievements (
   id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
   achievementid int,
   userid int,
   photo_proof varchar(255),
-  Completation_date date,
+  completationdate date,
   likes int,
   dislikes int,
   
@@ -133,33 +133,33 @@ INSERT INTO Achievements (categoryid, title, description) VALUES (3,'HxH','Termi
 
 #añadinos los logros por id : 4 ver para creer
 
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Mahoma','Visita tu primera montaña.');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Brisa marina','Visita tu primera cumbre o cresta montañosa.');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Salmonete','Visita tu primer río o arroyo de montaña.');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Calizo','Visita tu primera montaña caliza.');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Minero','Visita tu primera gruta o cueva subterránea.');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Para fotografiar','Visita tu primer campo de flores de lavanda, girasoles, etc.');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Remanso de paz','Visita tu primer lago o embalse de montaña.');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Pirotecnia natural','Visita tu primera explosion volcánica.');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Río de fuego','Visita una caída de magma.');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Escape','Visita tu primer geiser.');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Ice age','Visita tu primer glaciar.');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Bujero','Visita tu primer cenote.');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Spiker','Ver tus primeras formaciones de estalactitas o estalagmitas.');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Da Vinci AC','Ver tus primeras pinturas rupestres.');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Subacuático','Ver tu primer río a lago subterráneo.');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Cristalero','Ver tu primer cristal gigante formado en una cueva.');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Subcascada','Ver tu primera cascada subterránea.');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Noche iluminada','Ver por primera vez una aurora boreal/luces del norte.');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Dinastia Ming','La Gran Muralla (China) Parte de la Gran Muralla China.');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Gebalene','Petra (Jordania) La fachada principal de Petra (Jordania).');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Gladiador','Visita el Coliseo de Roma (Italia).');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Andale','Visita Chichen Itza (México).');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Kuzco','Visita Machu Picchu (Perú).');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Tijuca','El Cristo Redentor (Brasil).');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Al ladin','Taj Mahal (India).');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Maravillas','Conigue los logros Gebalene, Tijuca ,“Dinastia Ming”, “Gladiador”.');
-INSERT INTO Achievements (categoryid, title, descripcion) VALUES (4,'Maravillas al completo','Conigue los logros “Andale”, “Kuzco”, y “Al ladin”.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Mahoma','Visita tu primera montaña.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Brisa marina','Visita tu primera cumbre o cresta montañosa.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Salmonete','Visita tu primer río o arroyo de montaña.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Calizo','Visita tu primera montaña caliza.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Minero','Visita tu primera gruta o cueva subterránea.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Para fotografiar','Visita tu primer campo de flores de lavanda, girasoles, etc.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Remanso de paz','Visita tu primer lago o embalse de montaña.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Pirotecnia natural','Visita tu primera explosion volcánica.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Río de fuego','Visita una caída de magma.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Escape','Visita tu primer geiser.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Ice age','Visita tu primer glaciar.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Bujero','Visita tu primer cenote.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Spiker','Ver tus primeras formaciones de estalactitas o estalagmitas.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Da Vinci AC','Ver tus primeras pinturas rupestres.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Subacuático','Ver tu primer río a lago subterráneo.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Cristalero','Ver tu primer cristal gigante formado en una cueva.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Subcascada','Ver tu primera cascada subterránea.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Noche iluminada','Ver por primera vez una aurora boreal/luces del norte.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Dinastia Ming','La Gran Muralla (China) Parte de la Gran Muralla China.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Gebalene','Petra (Jordania) La fachada principal de Petra (Jordania).');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Gladiador','Visita el Coliseo de Roma (Italia).');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Andale','Visita Chichen Itza (México).');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Kuzco','Visita Machu Picchu (Perú).');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Tijuca','El Cristo Redentor (Brasil).');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Al ladin','Taj Mahal (India).');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Maravillas','Conigue los logros Gebalene, Tijuca ,“Dinastia Ming”, “Gladiador”.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Maravillas al completo','Conigue los logros “Andale”, “Kuzco”, y “Al ladin”.');
 
 #añadimos los logros por id : fiesta id 5
 
@@ -213,4 +213,8 @@ INSERT INTO Achievements (categoryid, title, description) VALUES (6,'Sin atadura
 INSERT INTO Achievements (categoryid, title, description) VALUES (6,'Cosplayer','Completa los logros Catgirl, Carnaval y Intimissimi.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (6,'When you go black','Completa 5 desafíos +18 PERVERSO.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (6,'You never come back','Completa 10 desafíos +18 PERVERSO.');
-INSERT INTO Achievements (categoryid, title, description) VALUES (6,'BDSM Lover','Completa TODOS los desafios +18 PERVERSO.'); 
+INSERT INTO Achievements (categoryid, title, description) VALUES (6,'BDSM Lover','Completa TODOS los desafios +18 PERVERSO.');
+
+#añadimos un Userachievements 
+
+INSERT INTO Userachievements (achievementid, userid, photo_proof, completationdate, likes, dislikes) VALUES (1,1,NULL,'2025-06-03',0,0);

@@ -10,8 +10,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
     @Entity
-    @Table(name="UserAchievements")
-    public class UserAchievements {
+    @Table(name="Userachievements")
+    public class Userachievements {
         @Id
         @GeneratedValue(strategy=GenerationType.IDENTITY)
         @Column(name="id")
@@ -26,7 +26,7 @@ import jakarta.persistence.Table;
         @Column(name="photo_proof")
         private String photoproof;
 
-        @Column(name="Completation_date")
+        @Column(name="completationdate")
         private Date completationdate;
 
         @Column(name="likes")
@@ -36,9 +36,9 @@ import jakarta.persistence.Table;
         private int dislike;
     
 
-    public UserAchievements() {};
+    public Userachievements() {};
 
-    public UserAchievements(Long id, int achievementid, int userId, String photoproof, Date completationdate, int like, int dislike) {
+    public Userachievements(Long id, int achievementid, int userId, String photoproof, Date completationdate, int like, int dislike) {
         this.id = id;
         this.achievementid = achievementid;
         this.userid = userId;

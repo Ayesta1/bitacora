@@ -16,10 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.dam2.bitacora.entity.Achievements;
 import com.dam2.bitacora.entity.Category;
+import com.dam2.bitacora.entity.Userachievements;
 import com.dam2.bitacora.entity.Users;
 import com.dam2.bitacora.service.AchievementService;
 import com.dam2.bitacora.service.UsersService;
 import com.dam2.bitacora.service.CategoryService;
+import com.dam2.bitacora.service.UserAchievementsService;
 
 //Indiciamos que es un controlador rest
 @RestController
@@ -27,6 +29,8 @@ public class UserRestController {
     
     public List<Users> users = new ArrayList<>();
     //Inyectamos el servicio para poder hacer uso de el
+
+    public List<Userachievements> userachievement = new ArrayList<>();
 
 
     @Autowired
@@ -37,6 +41,9 @@ public class UserRestController {
 
     @Autowired
     private CategoryService categoryService;
+
+    @Autowired
+    private UserAchievementsService userAchievementsService;
   
     @PostMapping("/users")
     public Users crearUsuario(@RequestBody Users usuario  ) {
@@ -66,12 +73,42 @@ public class UserRestController {
         return categoryService.findAll();
     }
 
-    // @GetMapping("/category/{id}")
-    // public Category getCategory(@PathVariable Long id){
-        
-    //     Category category = (Category) categoryService.findById(id);
-    //     return category;
-    // }
+   @GetMapping("/userachievement")
+   public List <Userachievements> findAllUserachievements(){
+
+    return userAchievementsService.findAll();
+    }
+
+    @PutMapping("/userachievement/{id}")
+    public Userachievements actualizarUserAchievement(@PathVariable Long id, @RequestBody Userachievements userachievementsActualizado) {
+        for (Userachievements userachievements : userachievement) {
+            if (userachievements.getId()==(id)) {
+                userachievements.setAchievementid(userachievementsActualizado.getAchievementid());
+                userachievements.setUserid(userachievementsActualizado.getUserid());
+                userachievements.setPhotoproof(userachievementsActualizado.getPhotoproof());
+                userachievements.setCompletationdate(userachievementsActualizado.getCompletationdate());
+                userachievements.setLike(userachievementsActualizado.getLike());
+                userachievements.setDislike(userachievementsActualizado.getDislike());
+                return userachievements;
+            }
+        }
+        return null;
+    }
+
+    @DeleteMapping("/userachievement/{id}")
+    public String deteteUserAchievement(@PathVariable Long id) {
+
+        Userachievements userachievements = userAchievementsService.findById(id);
+
+        if(userachievements == null) {
+            throw new RuntimeException("Userachievement id not found -"+id);
+        }
+
+        userAchievementsService.deleteById(id);
+
+        //Esto método, recibira el id de un usuario por URL y se borrará de la bd.
+        return "Deleted userachievement id - "+id;
+    }
 
 
     
@@ -131,7 +168,7 @@ public class UserRestController {
                 default:
                     throw new IllegalArgumentException("Invalid category id: " + categoryid);
         }
-        
+
     }
 
     @GetMapping("/users/achievements/{id}")
