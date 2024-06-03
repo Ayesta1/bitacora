@@ -79,6 +79,12 @@ public class UserRestController {
     return userAchievementsService.findAll();
     }
 
+    @GetMapping("/userachievement/{id}")
+    public Userachievements obtenerUserAchievements(@PathVariable Long id) {
+        Optional<Userachievements> userachievements = userachievement.stream().filter(u -> u.getId()==(id)).findFirst();
+        return userachievements.orElse(null);
+    }
+
     @PutMapping("/userachievement/{id}")
     public Userachievements actualizarUserAchievement(@PathVariable Long id, @RequestBody Userachievements userachievementsActualizado) {
         for (Userachievements userachievements : userachievement) {
