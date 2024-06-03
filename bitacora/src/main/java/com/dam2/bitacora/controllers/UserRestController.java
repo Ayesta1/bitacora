@@ -81,7 +81,7 @@ public class UserRestController {
 
     @GetMapping("/userachievement/{id}")
     public Userachievements obtenerUserAchievements(@PathVariable Long id) {
-        Optional<Userachievements> userachievements = userachievement.stream().filter(u -> u.getId()==(id)).findFirst();
+        Optional<Userachievements> userachievements = userachievement.stream().filter(a -> a.getId()==(id)).findFirst();
         return userachievements.orElse(null);
     }
 
