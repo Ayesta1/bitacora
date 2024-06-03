@@ -32,7 +32,7 @@ public class AchievementServiceImpl implements AchievementService {
     @Override
     public List<Achievements> findByCategoryId(Long categoryid) {
         
-        return achievementsDAO.findByCategoryId(null, null);
+        return achievementsDAO.findByCategoryId(null);
     }
 
 

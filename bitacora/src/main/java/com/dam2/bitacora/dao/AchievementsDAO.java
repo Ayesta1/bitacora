@@ -12,7 +12,7 @@ import com.dam2.bitacora.entity.Achievements;
 @Repository
 public interface AchievementsDAO extends JpaRepository <Achievements, Long>{
 
-    @Query("SELECT a FROM Achievements a, Category c WHERE c.id= :id AND a.categoryid= :categoryid")
-    List<Achievements> findByCategoryId(@Param("id") Long id,@Param("categoryid") Long categoryid);
+    @Query("SELECT a.title, a.description FROM Achievements a WHERE a.categoryid= :categoryid")
+    List<Achievements> findByCategoryId(@Param("categoryid") Long categoryid);
 
 }

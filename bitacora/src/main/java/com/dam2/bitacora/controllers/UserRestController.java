@@ -111,7 +111,7 @@ public class UserRestController {
     // }
 
     
-    @GetMapping("/category/{categoryId}")
+    @GetMapping("/category/{categoryid}")
     public List<Achievements> findByCategoryId(@PathVariable Long categoryid) {
 
         switch (categoryid.intValue()) {
@@ -131,6 +131,7 @@ public class UserRestController {
                 default:
                     throw new IllegalArgumentException("Invalid category id: " + categoryid);
         }
+        
     }
 
     @GetMapping("/users/achievements/{id}")
