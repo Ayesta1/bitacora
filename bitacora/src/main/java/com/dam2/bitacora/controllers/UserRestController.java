@@ -1,6 +1,5 @@
 package com.dam2.bitacora.controllers;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -27,11 +26,9 @@ import com.dam2.bitacora.service.UserAchievementsService;
 @RestController
 public class UserRestController {
     
-    public List<Users> users = new ArrayList<>();
-    //Inyectamos el servicio para poder hacer uso de el
+    public List<Users> users = new ArrayList<>(); //Inyectamos el servicio para poder hacer uso de el
 
     public List<Userachievements> userachievement = new ArrayList<>();
-
 
     @Autowired
     private UsersService usersService;
@@ -55,37 +52,25 @@ public class UserRestController {
     public List<Users> findAll() {
         return usersService.findAll();
     }
-    // @GetMapping("/users")
-    // public List<Users> findAll(){
-    //     //retornará todos los usuarios
-    //     return usersService.findAll();
-    // }
 
     @GetMapping("/achievements")
-    public List<Achievements> findAllAchievements(){
-        //retornará todos los usuarios
+    public List<Achievements> findAllAchievements(){ //retornará todos los usuarios
         return achievementService.findAll();
     }
 
     @GetMapping("/category")
-    public List<Category> findAllCategory(){
-        //retornará todos los usuarios
+    public List<Category> findAllCategory(){ //retornará todos los usuarios
         return categoryService.findAll();
     }
-
-   @GetMapping("/userachievement")
-   public List <Userachievements> findAllUserachievements(){
-
-    return userAchievementsService.findAll();
+    
+    @GetMapping("/userachievement")
+    public List <Userachievements> findAllUserachievements(){
+        return userAchievementsService.findAll();
     }
 
     @PutMapping("/userachievement")
-    public Userachievements updateUserAchievement(@RequestBody Userachievements id) {
-
+    public Userachievements updateUserAchievement(@RequestBody Userachievements id) { //este metodo actualizará al usuario enviado
         userAchievementsService.save(id);
-
-        //este metodo actualizará al usuario enviado
-
         return id;
     }
 
@@ -126,12 +111,8 @@ public class UserRestController {
         return "Deleted userachievement id - "+id;
     }
 
-
-    
-
     /*Este método se hará cuando por una petición GET (como indica la anotación) se llame a la url + el id de un usuario
     http://127.0.0.1:8080/users/1 */
-
     @GetMapping("/users/{id}")
     public Users obtenerUsuario(@PathVariable Long id) {
         Optional<Users> usuario = users.stream().filter(u -> u.getId()==(id)).findFirst();
@@ -155,7 +136,6 @@ public class UserRestController {
     // @GetMapping("/users/{userId}")
     // public Users getUser(@PathVariable long userId){
     //     Users users = usersService.findById(userId);
-
     //     if(users == null) {
     //         throw new RuntimeException("User id not found -"+userId);
     //     }
@@ -163,60 +143,49 @@ public class UserRestController {
     //     return users;
     // }
 
-    
     @GetMapping("/category/{categoryid}")
     public List<Achievements> findByCategoryId(@PathVariable Long categoryid) {
 
         switch (categoryid.intValue()) {
             
             case 1:
-                    return achievementService.findByCategoryId(1L);
+                return achievementService.findByCategoryId(1L);
             case 2:
-                    return achievementService.findByCategoryId(2L);   
+                return achievementService.findByCategoryId(2L);   
             case 3:
-                    return achievementService.findByCategoryId(3L);
+                return achievementService.findByCategoryId(3L);
             case 4:
-                    return achievementService.findByCategoryId(4L);
+                return achievementService.findByCategoryId(4L);
             case 5:
-                    return achievementService.findByCategoryId(5L);
+                return achievementService.findByCategoryId(5L);
             case 6:
-                    return achievementService.findByCategoryId(6L);
-                default:
-                    throw new IllegalArgumentException("Invalid category id: " + categoryid);
+                return achievementService.findByCategoryId(6L);
+            default:
+                throw new IllegalArgumentException("Invalid category id: " + categoryid);
         }
-
     }
 
     @GetMapping("/users/achievements/{id}")
     public Achievements getAchievements(@PathVariable long id){
-
         Achievements achievements = (Achievements) achievementService.findById(id);
-
         return achievements;
     }
-    
        
     // /*Este método se hará cuando por una petición POST (como indica la anotación) se llame a la url
     // http://127.0.0.1:8080/users  */
     // @PostMapping("/users")
     // public Users addUser(@RequestBody Users users) {
     //     users.setId(null);
-
     //     //Este metodo guardará al usuario enviado
     //     usersService.save(users);
-
     //     return users;
-
     // }
+
     // /*Este método se hará cuando por una petición PUT (como indica la anotación) se llame a la url
     // http://127.0.0.1:8080/users  */
     @PutMapping("/users")
     public Users updateUser(@RequestBody Users id) {
-
-        usersService.save(id);
-
-        //este metodo actualizará al usuario enviado
-
+        usersService.save(id); //Este metodo actualizará al usuario enviado
         return id;
     }
 
@@ -224,17 +193,12 @@ public class UserRestController {
     // http://127.0.0.1:8080/users/1  */
     @DeleteMapping("users/{userId}")
     public String deteteUser(@PathVariable Long id) {
-
         Users user = usersService.findById(id);
-
         if(user == null) {
             throw new RuntimeException("User id not found -"+id);
         }
 
-        usersService.deleteById(id);
-
-        //Esto método, recibira el id de un usuario por URL y se borrará de la bd.
+        usersService.deleteById(id); //Este método recibira el id de un usuario por URL y se borrará de la bd.
         return "Deleted user id - "+id;
     }
-
 }

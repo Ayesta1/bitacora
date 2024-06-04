@@ -9,5 +9,4 @@ import com.dam2.bitacora.entity.Users;
 @Repository
 public interface UsersDAO extends JpaRepository<Users, Long>{
 
-    
 }

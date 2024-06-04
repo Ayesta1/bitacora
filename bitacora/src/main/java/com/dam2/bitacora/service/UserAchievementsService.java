@@ -2,7 +2,6 @@ package com.dam2.bitacora.service;
 
 import java.util.List;
 import org.springframework.stereotype.Repository;
-
 import com.dam2.bitacora.entity.Userachievements;
 
 @Repository

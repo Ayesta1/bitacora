@@ -8,5 +8,4 @@ import com.dam2.bitacora.entity.Category;
 @Repository
 public interface CategoryDAO extends JpaRepository <Category, Long> {
 
-    
 }

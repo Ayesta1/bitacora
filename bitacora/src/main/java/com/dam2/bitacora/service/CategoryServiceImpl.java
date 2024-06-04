@@ -3,7 +3,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.dam2.bitacora.dao.CategoryDAO;
 import com.dam2.bitacora.entity.Category;
 
@@ -24,5 +23,4 @@ public class CategoryServiceImpl implements CategoryService{
         // TODO Auto-generated method stub
         return categoryDAO.findAll();
     }
-
 }

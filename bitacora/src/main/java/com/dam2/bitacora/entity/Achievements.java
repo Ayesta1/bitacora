@@ -10,7 +10,6 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name="Achievements")
 public class Achievements {
-
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="id")
@@ -34,11 +33,11 @@ public class Achievements {
         this.description = description;
     }
 
-    public Long getAchievementId() {
+    public Long getId() {
         return id;
     }
 
-    public void setAchievementId(Long achievementid) {
+    public void setId(Long achievementid) {
         this.id = achievementid;
     }
 
@@ -70,5 +69,4 @@ public class Achievements {
     public String toString() {
         return "User [id=" + id + ", category=" + categoryid + ", title=" + title + ", description=" + description + "]";
     }
-
 }

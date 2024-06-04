@@ -1,7 +1,6 @@
 package com.dam2.bitacora.entity;
 
 import java.util.Date;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,32 +8,31 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-    @Entity
-    @Table(name="Userachievements")
-    public class Userachievements {
-        @Id
-        @GeneratedValue(strategy=GenerationType.IDENTITY)
-        @Column(name="id")
-        private Long id;
+@Entity
+@Table(name="Userachievements")
+public class Userachievements {
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="id")
+    private Long id;
 
-        @Column(name="achievementid")
-        private int achievementid;
+    @Column(name="achievementid")
+    private int achievementid;
 
-        @Column(name="userid")
-        private int userid;
+    @Column(name="userid")
+    private int userid;
 
-        @Column(name="photo_proof")
-        private String photoproof;
+    @Column(name="photo_proof")
+    private String photoproof;
 
-        @Column(name="completationdate")
-        private Date completationdate;
+    @Column(name="completationdate")
+    private Date completationdate;
 
-        @Column(name="likes")
-        private int like;
+    @Column(name="likes")
+    private int like;
 
-        @Column(name="dislikes")
-        private int dislike;
-    
+    @Column(name="dislikes")
+    private int dislike;
 
     public Userachievements() {};
 
@@ -106,10 +104,7 @@ import jakarta.persistence.Table;
 
     @Override
     public String toString() {
-       
-        return "UserAchievements [id=" + id + ", achievementid=" + achievementid + ", userid=" + userid + ", photoproof=" + photoproof + ", completationdate=" + completationdate + ", like=" + like
-        + ",dislike=" + dislike +"]";
-    }    
-    
+        
+        return "UserAchievements [id=" + id + ", achievementid=" + achievementid + ", userid=" + userid + ", photoproof=" + photoproof + ", completationdate=" + completationdate + ", like=" + like + ",dislike=" + dislike +"]";
+    }
 }
-

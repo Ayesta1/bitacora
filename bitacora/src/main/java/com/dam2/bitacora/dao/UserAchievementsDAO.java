@@ -8,5 +8,5 @@ import com.dam2.bitacora.entity.Userachievements;
 
 @Repository
 public interface UserAchievementsDAO extends JpaRepository <Userachievements, Long>{
-
+    
 }

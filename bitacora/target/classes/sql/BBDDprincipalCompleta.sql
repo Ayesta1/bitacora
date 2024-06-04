@@ -77,13 +77,22 @@ INSERT INTO Achievements (categoryid, title, description) VALUES (1,'Introducci�
 INSERT INTO Achievements (categoryid, title, description) VALUES (1,'Género','Descubre tu genero preferido escuchando tus primeras canciones');
 INSERT INTO Achievements (categoryid, title, description) VALUES (1,'España','Escucha un disco o proyecto de algún artista español.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (1,'International','Escucha algún proyecto donde el inglés sea la lengua principal.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (1,'Overseas','Escucha música local de un país de sudamérica.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (1,'Expanding taste','Escucha al menos 1 proyecto de 10 géneros musicales distintos.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (1,'Día a día','Crea tu primera playlist.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (1,'Experto en listas',' Crea múltiples playlists dividiéndolas como quieras.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (1,'0 anuncios','Paga tu primera suscripción en cualquier plataforma de música.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (1,'Inanunciable','Paga una suscripción en cualquier plataforma de música durante 12 meses.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (1,'Underground experience','Prueba a escuchar a cualquier artista con menos de 1M de oyentes mensuales.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (1,'Vecino ruidoso','Prueba a escuchar a cualquier artista con menos de 10k de oyentes mensuales.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (1,'Experimentando','Prueba a escuchar por primera vez playboy carti.');
-INSERT INTO Achievements (categoryid, title, description) VALUES (1,'Overseas','Escucha música local de un país de sudamérica.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (1,'Gramola','Escucha música a través de una gramola.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (1,'Vinilo','Escucha música de un vinilo.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (1,'Cassete','Escucha música de un casette.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (1,'CD','Escucha música de un CD.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (1,'USB','Escucha música de un USB.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (1,'iWindows?','Usa iTunes desde un PC Windows.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (1,'En vivo','Ve a un concierto.');
 
 #añadinos los logros por id : 2 gastronomia
 
@@ -115,20 +124,20 @@ INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Tragones y 
 INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Old but gold','Mira un anime que empezó su emisión antes del 2000.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Escritura peligrosa','Obtén una Death Note y escribe tres nombres en ella.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Rewatch','Termina un anime por segunda vez.');
-INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Bleach','Termina el anime “Bleach”.');
-INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Death note','Termina el anime “Death Note”.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Bleached!','Termina el anime “Bleach”.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (3,'lAdies','Termina el anime “Death Note”.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Grand line 2.0','Empieza a ver el live action de one piece.');
-INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Jojos','Termina el anime “Jojos bizarre adventure”.');
-INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Baki','Termina el anime “Baki”.');
-INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Hanma','Termina el anime “Baki Hanma”.');
-INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Cowboy bebop','Termina el anime “Cowboy bebop”.');
-INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Bebop 2.0','Termina el live action de “Cowboy bebop”.');
-INSERT INTO Achievements (categoryid, title, description) VALUES (3,'My hero academia','Termina el anime “my hero academia”.');
-INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Attack on titan','Termina el anime “attack on titan”.');
-INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Detectiu conan','Termina el anime “Detectiu Conan”.');
-INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Inuyasha','Termina el anime “inuyasha”.');
-INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Sakura cazadora de cartas','Termina el anime “Sakura cazadora de cartas”.');
-INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Bobobo','Termina el anime “Bobobo”.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (3,'iS tHiS a JoJoREfERenCE?!?','Termina el anime “Jojos bizarre adventure”.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Tunometacabrasalabambiche','Termina el anime “Baki”.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Megustaprobalsuboca','Termina el anime “Baki Hanma”.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Cowboy Bebop','Termina el anime “Cowboy Bebop”.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Bebop 2.0','Termina el live action de “Cowboy Bebop”.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Mi-rodilla!','Termina el anime “My Hero Academia”.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Sasageyo','Termina el anime “attack on titan”.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Conan el no bárbaro','Termina el anime “Detective Conan”.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Tu crush antes de Justin Biber','Termina el anime “Inuyasha”.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Card Hunter','Termina el anime “Sakura cazadora de cartas”.');
+INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Ataque de los pelos nasales!','Termina el anime “Bobobo Bobobobo”.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (3,'HxH','Termina el anime “Hunter x Hunter”.');
 
 #añadinos los logros por id : 4 ver para creer

@@ -1,8 +1,6 @@
 package com.dam2.bitacora.entity;
 
 import java.time.Year;
-
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,7 +11,6 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name="Users")
 public class Users {
-
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="id")
@@ -95,7 +92,6 @@ public class Users {
     
     @Override
     public String toString() {
-        return "User [id=" + id + ", username=" + username + ", birthday=" + birthday + ", mail=" + mail + ", password=" + password + ", profilephoto=" + profilephoto
-                + "]";
+        return "User [id=" + id + ", username=" + username + ", birthday=" + birthday + ", mail=" + mail + ", password=" + password + ", profilephoto=" + profilephoto + "]";
     }
 }

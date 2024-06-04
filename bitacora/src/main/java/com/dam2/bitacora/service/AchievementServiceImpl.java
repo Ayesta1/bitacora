@@ -1,10 +1,8 @@
 package com.dam2.bitacora.service;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.dam2.bitacora.dao.AchievementsDAO;
 import com.dam2.bitacora.entity.Achievements;
 
@@ -42,8 +40,5 @@ public class AchievementServiceImpl implements AchievementService {
     // public Achievements getAchievementsByCategoryId(long categoryid) {
     //     // TODO Auto-generated method stub
     //     return achievementsDAO.findByCategoryId(categoryid);
-    // }
-
-
-   
+    // }  
 }

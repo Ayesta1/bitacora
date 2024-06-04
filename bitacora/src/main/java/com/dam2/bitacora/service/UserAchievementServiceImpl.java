@@ -3,7 +3,6 @@ package com.dam2.bitacora.service;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.dam2.bitacora.dao.UserAchievementsDAO;
 import com.dam2.bitacora.entity.Userachievements;
 
@@ -27,7 +26,6 @@ public class UserAchievementServiceImpl implements UserAchievementsService{
 
     @Override
     public void save(Userachievements userachievements) {
-
         userAchievementsDAO.save(userachievements);
     }
 
@@ -37,9 +35,7 @@ public class UserAchievementServiceImpl implements UserAchievementsService{
         
         if (userachievements != null) {
             userAchievementsDAO.delete(userachievements);
-        
         return;
         }
     }
-
 }
