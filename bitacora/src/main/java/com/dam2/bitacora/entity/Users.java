@@ -9,37 +9,43 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="Users")
+@Table(name = "Users")
 public class Users {
+
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
-    @Column(name="username")
+    @Column(name = "username")
     private String username;
 
-    @Column(name="birthday")
+    @Column(name = "birthday")
     private Year birthday;
 
-    @Column(name="mail")
+    @Column(name = "mail")
     private String mail;
 
-    @Column(name="password")
+    @Column(name = "password")
     private String password;
 
-    @Column(name="profile_photo")
+    @Column(name = "profile_photo")
     private String profilephoto;
 
-    public Users() {}
+    @Column(name = "biography") // Nuevo campo biography
+    private String biography;
 
-    public Users(Long id, String username,Year birthday, String mail, String password, String profilephoto) {
+    public Users() {
+    }
+
+    public Users(Long id, String username, Year birthday, String mail, String password, String profilephoto, String biography) {
         this.id = id;
         this.username = username;
         this.birthday = birthday;
         this.mail = mail;
         this.password = password;
         this.profilephoto = profilephoto;
+        this.biography = biography;
     }
 
     public Long getId() {
@@ -89,9 +95,18 @@ public class Users {
     public void setProfilePhoto(String profilephoto) {
         this.profilephoto = profilephoto;
     }
-    
+
+    public String getBiography() {
+        return biography;
+    }
+
+    public void setBiography(String biography) {
+        this.biography = biography;
+    }
+
     @Override
     public String toString() {
-        return "User [id=" + id + ", username=" + username + ", birthday=" + birthday + ", mail=" + mail + ", password=" + password + ", profilephoto=" + profilephoto + "]";
+        return "User [id=" + id + ", username=" + username + ", birthday=" + birthday + ", mail=" + mail + ", password="
+                + password + ", profilephoto=" + profilephoto + ", biography=" + biography + "]";
     }
 }

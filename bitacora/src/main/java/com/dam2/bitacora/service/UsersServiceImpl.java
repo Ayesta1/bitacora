@@ -6,36 +6,42 @@ import org.springframework.stereotype.Service;
 import com.dam2.bitacora.dao.UsersDAO;
 import com.dam2.bitacora.entity.Users;
 
+
 @Service
-public class UsersServiceImpl  implements UsersService {
+public class UsersServiceImpl implements UsersService {
 
     @Autowired
-    private UsersDAO usersDAO; 
-
-    @Override
-    public Users findById(Long id) {
-        // TODO Auto-generated method stub
-       return usersDAO.findById(id).orElse(null);
-    }
+    private UsersDAO usersDAO;
 
     @Override
     public List<Users> findAll() {
-        // TODO Auto-generated method stub
         return usersDAO.findAll();
+    }
+
+    @Override
+    public Users findById(Long id) {
+        return usersDAO.findById(id).orElse(null);
     }
 
     @Override
     public void save(Users user) {
         usersDAO.save(user);
     }
-    
+
     @Override
     public void deleteById(Long id) {
-        Users user = usersDAO.findById(id).orElse(null);
-        
-        if (user != null) {
-            usersDAO.delete(user);
-        return;
-        }
+        usersDAO.deleteById(id);
     }
+
+    @Override
+    public void updateBiography(Long id, String biography) {
+    Users user = usersDAO.findById(id).orElse(null);
+    if (user != null) {
+        user.setBiography(biography);
+        usersDAO.save(user);
+        System.out.println("Biography updated successfully for user id: " + id);
+    } else {
+        System.out.println("User with id " + id + " not found");
+    }
+}
 }

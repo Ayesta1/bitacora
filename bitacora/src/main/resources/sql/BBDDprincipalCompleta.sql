@@ -8,7 +8,8 @@ CREATE TABLE Users(
   birthday year NOT NULL,
   mail varchar(40) NOT NULL,
   password varchar(13) NOT NULL,
-  profile_photo varchar(255)
+  profile_photo varchar(255),
+  biography varchar(255)
 );
 CREATE TABLE Categories (
   id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -58,9 +59,9 @@ CREATE TABLE FriendRequests (
 
 #añadimos usuarios 
 
-INSERT INTO Users(username, birthday, mail, password, profile_photo) VALUES ('Jordi',1999,'j@gmail.com','1234', NULL);
-INSERT INTO Users(username, birthday, mail, password, profile_photo) VALUES ('Roc',2000,'r@gmail.com','1234', NULL);
-INSERT INTO Users(username, birthday, mail, password, profile_photo) VALUES ('Ali',2005,'a@gmail.com','1234', NULL);
+INSERT INTO Users(username, birthday, mail, password, profile_photo, biography) VALUES ('Jordi',1999,'j@gmail.com','1234', NULL, '');
+INSERT INTO Users(username, birthday, mail, password, profile_photo, biography) VALUES ('Roc',2000,'r@gmail.com','1234', NULL, '');
+INSERT INTO Users(username, birthday, mail, password, profile_photo, biography) VALUES ('Ali',2005,'a@gmail.com','1234', NULL, '');
 
 #añadimos las categorias
 

@@ -1,18 +1,12 @@
 package com.dam2.bitacora.service;
 
 import java.util.List;
-import org.springframework.stereotype.Repository;
 import com.dam2.bitacora.entity.Users;
 
-@Repository
-public interface UsersService{
-    
-    public List<Users> findAll();
-    
-    public Users findById(Long id);
-
-    public void save(Users id);
-
-    public void deleteById(Long id);
-    
+public interface UsersService {
+    List<Users> findAll();
+    Users findById(Long id);
+    void save(Users user);
+    void deleteById(Long id);
+    void updateBiography(Long id, String biography);
 }
