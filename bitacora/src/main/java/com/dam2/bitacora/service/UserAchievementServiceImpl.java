@@ -14,13 +14,11 @@ public class UserAchievementServiceImpl implements UserAchievementsService{
 
     @Override
     public Userachievements findById(Long id) {
-        // TODO Auto-generated method stub
         return userAchievementsDAO.findById(id).orElse(null);
     }
 
     @Override
     public List<Userachievements> findAll() {
-        // TODO Auto-generated method stub
         return userAchievementsDAO.findAll();
     }
 

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dam2.bitacora.entity.Achievements;
@@ -23,8 +25,8 @@ import com.dam2.bitacora.service.CategoryService;
 import com.dam2.bitacora.service.UserAchievementsService;
 
 @RestController
-public class UserRestController {
-    
+public class ApiController {
+
     @Autowired
     private UsersService usersService;
 
@@ -36,7 +38,7 @@ public class UserRestController {
 
     @Autowired
     private UserAchievementsService userAchievementsService;
-  
+
     @GetMapping("/users")
     public List<Users> findAllUsers() {
         return usersService.findAll();
@@ -51,12 +53,18 @@ public class UserRestController {
     public List<Category> findAllCategories() {
         return categoryService.findAll();
     }
-    
+
     @GetMapping("/userachievements")
     public List<Userachievements> findAllUserAchievements() {
         return userAchievementsService.findAll();
     }
 
+    @PostMapping("/users")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Users createUser(@RequestBody Users newUser) {
+        return usersService.save(newUser);
+    }
+    
     @GetMapping("/userachievements/{id}")
     public ResponseEntity<Userachievements> findUserAchievementById(@PathVariable Long id) {
         Userachievements userachievement = userAchievementsService.findById(id);
@@ -85,16 +93,16 @@ public class UserRestController {
         return ResponseEntity.ok(existingUserAchievement);
     }
 
-    @DeleteMapping("/userachievements/{id}")
-    public ResponseEntity<String> deleteUserAchievement(@PathVariable Long id) {
-        Userachievements userachievement = userAchievementsService.findById(id);
-        if (userachievement == null) {
+    @DeleteMapping("/users/{id}")
+    public ResponseEntity<String> deleteUser(@PathVariable Long id) {
+        Users user = usersService.findById(id);
+        if (user == null) {
             return ResponseEntity.notFound().build();
         }
 
-        userAchievementsService.deleteById(id);
+        usersService.deleteById(id);
 
-        return ResponseEntity.ok("Deleted userachievement id - " + id);
+        return ResponseEntity.ok("Deleted user id - " + id);
     }
 
     @GetMapping("/users/{id}")
@@ -137,18 +145,6 @@ public class UserRestController {
         usersService.save(existingUser);
         
         return ResponseEntity.ok(existingUser);
-    }
-
-    @DeleteMapping("/users/{id}")
-    public ResponseEntity<String> deleteUser(@PathVariable Long id) {
-        Users user = usersService.findById(id);
-        if (user == null) {
-            return ResponseEntity.notFound().build();
-        }
-
-        usersService.deleteById(id);
-
-        return ResponseEntity.ok("Deleted user id - " + id);
     }
 
     @GetMapping("/category/{categoryid}")

@@ -32,7 +32,7 @@ public class Users {
     @Column(name = "profile_photo")
     private String profilephoto;
 
-    @Column(name = "biography") // Nuevo campo biography
+    @Column(name = "biography")
     private String biography;
 
     public Users() {

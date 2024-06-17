@@ -8,9 +8,6 @@ import com.dam2.bitacora.entity.Achievements;
 public interface AchievementService {
 
     public Achievements findById(long id);
-
     public List<Achievements> findAll();
-
     public List<Achievements> findByCategoryId(Long categoryid);
-
 }

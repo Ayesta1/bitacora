@@ -8,7 +8,6 @@ import com.dam2.bitacora.entity.Category;
 public interface CategoryService {
 
     public Category findById(Long id);
-
     public List<Category> findAll();
 
 }

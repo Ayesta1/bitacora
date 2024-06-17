@@ -32,13 +32,4 @@ public class AchievementServiceImpl implements AchievementService {
         
         return achievementsDAO.findByCategoryId(null);
     }
-
-
-    
-    // QUERY ERROR
-    // @Override
-    // public Achievements getAchievementsByCategoryId(long categoryid) {
-    //     // TODO Auto-generated method stub
-    //     return achievementsDAO.findByCategoryId(categoryid);
-    // }  
 }

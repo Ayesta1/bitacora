@@ -21,9 +21,7 @@ CREATE TABLE Achievements (
   id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
   categoryid int,
   title varchar(40) NOT NULL,
-  description varchar(128) NOT NULL,
-  
-  FOREIGN KEY (categoryid) REFERENCES Categories(id)
+  description varchar(128) NOT NULL
 );
 
 CREATE TABLE Userachievements (
@@ -33,28 +31,19 @@ CREATE TABLE Userachievements (
   photo_proof varchar(255),
   completationdate date,
   likes int,
-  dislikes int,
-  
-  FOREIGN KEY (userid) REFERENCES Users (id),
-  FOREIGN KEY (achievementid) REFERENCES Achievements(id)
+  dislikes int
 );
 
 CREATE TABLE Friendships (
   friendship int PRIMARY KEY NOT NULL AUTO_INCREMENT,
   friendA int,
-  friendB int,
-  
-  FOREIGN KEY (friendA) REFERENCES Users(id),
-  FOREIGN KEY (friendB) REFERENCES Users(id)
+  friendB int
 );
 
 CREATE TABLE FriendRequests (
   friendrequests int PRIMARY KEY NOT NULL AUTO_INCREMENT,
   userSender int,
-  userReciever int,
-  
-  FOREIGN KEY (userSender) REFERENCES Users(id),
-  FOREIGN KEY (userReciever) REFERENCES Users(id)
+  userReciever int
 );
 
 #añadimos usuarios 
@@ -225,6 +214,6 @@ INSERT INTO Achievements (categoryid, title, description) VALUES (6,'When you go
 INSERT INTO Achievements (categoryid, title, description) VALUES (6,'You never come back','Completa 10 desafíos +18 PERVERSO.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (6,'BDSM Lover','Completa TODOS los desafios +18 PERVERSO.');
 
-#añadimos un Userachievements 
+#añadimos un Userachievements
 
 INSERT INTO Userachievements (achievementid, userid, photo_proof, completationdate, likes, dislikes) VALUES (1,1,NULL,'2025-06-03',0,0);
