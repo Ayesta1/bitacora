@@ -15,7 +15,6 @@ public class AchievementServiceImpl implements AchievementService {
     
     @Override
     public Achievements findById(long id) {
-        // TODO Auto-generated method stub
         return achievementsDAO.findById(id).orElse(null);
     }
 

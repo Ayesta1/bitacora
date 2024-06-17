@@ -46,13 +46,13 @@ CREATE TABLE FriendRequests (
   userReciever int
 );
 
-#añadimos usuarios 
+#Añadimos usuarios
 
-INSERT INTO Users(username, birthday, mail, password, profile_photo, biography) VALUES ('Jordi',1999,'j@gmail.com','1234', NULL, '');
-INSERT INTO Users(username, birthday, mail, password, profile_photo, biography) VALUES ('Roc',2000,'r@gmail.com','1234', NULL, '');
-INSERT INTO Users(username, birthday, mail, password, profile_photo, biography) VALUES ('Ali',2005,'a@gmail.com','1234', NULL, '');
+INSERT INTO Users(username, birthday, mail, password, profile_photo, biography) VALUES ('Jordi',1999,'ayesta1@gmail.com','1234', NULL, '');
+INSERT INTO Users(username, birthday, mail, password, profile_photo, biography) VALUES ('Roc',2000,'roviraroc@gmail.com','1234', NULL, '');
+INSERT INTO Users(username, birthday, mail, password, profile_photo, biography) VALUES ('Ali',2005,'ayoussefmohammad@gmail.com','1234', NULL, '');
 
-#añadimos las categorias
+#Añadimos las categorias
 
 INSERT INTO Categories (name, icon) VALUES ('Musica', NULL);
 INSERT INTO Categories (name, icon) VALUES ('Gastronomia', NULL);
@@ -61,7 +61,7 @@ INSERT INTO Categories (name, icon) VALUES ('Ver para creer', NULL);
 INSERT INTO Categories (name, icon) VALUES ('+18 fiesta', NULL);
 INSERT INTO Categories (name, icon) VALUES ('+18 perverso', NULL);
 
-#añadimos los logros por id : 1 musica
+#Añadimos los logros (id 1 = Musica)
 
 INSERT INTO Achievements (categoryid, title, description) VALUES (1,'Introducción a la música','Escucha un proyecto de cualquier artista.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (1,'Género','Descubre tu genero preferido escuchando tus primeras canciones');
@@ -84,7 +84,7 @@ INSERT INTO Achievements (categoryid, title, description) VALUES (1,'USB','Escuc
 INSERT INTO Achievements (categoryid, title, description) VALUES (1,'iWindows?','Usa iTunes desde un PC Windows.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (1,'En vivo','Ve a un concierto.');
 
-#añadinos los logros por id : 2 gastronomia
+#Añadimos los logros (id 2 = Gastronomia)
 
 INSERT INTO Achievements (categoryid, title, description) VALUES (2,'Fogonero','Prepara el fuego perfecto de una barbacoa.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (2,'Sangre argentina','Prepara un asado argentino.');
@@ -107,7 +107,7 @@ INSERT INTO Achievements (categoryid, title, description) VALUES (2,'Pollo de pa
 INSERT INTO Achievements (categoryid, title, description) VALUES (2,'El más rápido','Come caracoles.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (2,'Paladar Exotico','Consigue los logros Ilmare, Pollo de pantano y El más rápido.');
 
-#añadinos los logros por id : 3 anime
+#Añadimos los logros (id 3 = Anime)
 
 INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Your April in April','Empieza y termina “Your Lie in April” en abril.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Tragones y Mazmorras','Mira la primera temporada de “Tragones y Mazmorras”.');
@@ -130,7 +130,7 @@ INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Card Hunter
 INSERT INTO Achievements (categoryid, title, description) VALUES (3,'Ataque de los pelos nasales!','Termina el anime “Bobobo Bobobobo”.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (3,'HxH','Termina el anime “Hunter x Hunter”.');
 
-#añadinos los logros por id : 4 ver para creer
+#Añadimos los logros (id 4 = Ver para creer)
 
 INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Mahoma','Visita tu primera montaña.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Brisa marina','Visita tu primera cumbre o cresta montañosa.');
@@ -160,7 +160,7 @@ INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Al ladin','
 INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Maravillas','Conigue los logros Gebalene, Tijuca ,“Dinastia Ming”, “Gladiador”.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (4,'Maravillas al completo','Conigue los logros “Andale”, “Kuzco”, y “Al ladin”.');
 
-#añadimos los logros por id : fiesta id 5
+#Añadimos los logros (id 5 = fiesta)
 
 INSERT INTO Achievements (categoryid, title, description) VALUES (5,'El que no apoya… ','Beber un chupito con la frase de El que no apoya no folla y pasar en culo del chupito por la mesa.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (5,'Classic chupito','Beber un chupito con la frase de arriba, abajo al centro y pa dentro.');
@@ -185,7 +185,7 @@ INSERT INTO Achievements (categoryid, title, description) VALUES (5,'Inmortal','
 INSERT INTO Achievements (categoryid, title, description) VALUES (5,'Jesucristo','Completar los logros Crucifixión, Casi Resurrección y Resurrección.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (5,'El Señor de la Noche',' Completar TODOS los logros de +18 FIESTA.');
 
-#añadimos los logros por id : perverso id 6
+#Añadimos los logros (id 6 = perverso)
 
 INSERT INTO Achievements (categoryid, title, description) VALUES (6,'Descubriendo sabores','Practica sexo oral por primera vez.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (6,'De asterisco a japon ','Practica sexo anal por primera vez.');
@@ -213,7 +213,3 @@ INSERT INTO Achievements (categoryid, title, description) VALUES (6,'Cosplayer',
 INSERT INTO Achievements (categoryid, title, description) VALUES (6,'When you go black','Completa 5 desafíos +18 PERVERSO.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (6,'You never come back','Completa 10 desafíos +18 PERVERSO.');
 INSERT INTO Achievements (categoryid, title, description) VALUES (6,'BDSM Lover','Completa TODOS los desafios +18 PERVERSO.');
-
-#añadimos un Userachievements
-
-INSERT INTO Userachievements (achievementid, userid, photo_proof, completationdate, likes, dislikes) VALUES (1,1,NULL,'2025-06-03',0,0);

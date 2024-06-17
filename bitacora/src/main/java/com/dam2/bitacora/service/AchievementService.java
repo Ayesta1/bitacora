@@ -10,4 +10,5 @@ public interface AchievementService {
     public Achievements findById(long id);
     public List<Achievements> findAll();
     public List<Achievements> findByCategoryId(Long categoryid);
+    
 }

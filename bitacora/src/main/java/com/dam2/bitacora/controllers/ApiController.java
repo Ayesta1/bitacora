@@ -1,7 +1,6 @@
 package com.dam2.bitacora.controllers;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -64,7 +63,7 @@ public class ApiController {
     public Users createUser(@RequestBody Users newUser) {
         return usersService.save(newUser);
     }
-    
+
     @GetMapping("/userachievements/{id}")
     public ResponseEntity<Userachievements> findUserAchievementById(@PathVariable Long id) {
         Userachievements userachievement = userAchievementsService.findById(id);

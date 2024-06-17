@@ -104,7 +104,6 @@ public class Userachievements {
 
     @Override
     public String toString() {
-        
         return "UserAchievements [id=" + id + ", achievementid=" + achievementid + ", userid=" + userid + ", photoproof=" + photoproof + ", completationdate=" + completationdate + ", like=" + like + ",dislike=" + dislike +"]";
     }
 }

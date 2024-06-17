@@ -14,13 +14,11 @@ public class CategoryServiceImpl implements CategoryService{
 
     @Override
     public Category findById(Long id) {
-        // TODO Auto-generated method stub
         return categoryDAO.findById(id).orElse(null);
     }
-
+    
     @Override
     public List<Category> findAll() {
-        // TODO Auto-generated method stub
         return categoryDAO.findAll();
     }
 }
